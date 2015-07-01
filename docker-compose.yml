@@ -1,0 +1,9 @@
+app:
+  build: .
+  volumes:
+    - .:/code
+  environment:
+    LEIN_REPL_PORT: 4001
+  ports:
+    - "80:80"
+    - "4001:4001"
