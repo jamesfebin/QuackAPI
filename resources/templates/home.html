@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="jumbotron">
+    <h1>Welcome to QuackAPI</h1>
+    <br/>
+
+    <p class="lead" > Here how to use the API </p>
+
+    <br/>
+    <ol class="breadcrumb">
+    <b> http://yoursite.com/quack/time </b>
+  </ol>
+  <ol class="breadcrumb">
+
+    <b> METHOD : POST </b>
+  </ol>
+
+  <ol class="breadcrumb">
+
+    <b> Parameters : '{"text":"from 9:30 - 11:00 on Thursday"}' </b>
+  </ol>
+
+
+    <br/> <h4>  Sample JSON Response (Encoded) </h4>
+
+    <div class="panel panel-default">
+    <div class="panel-body">
+
+      "[{\"dim\":\"time\",\"body\":\"from 9:30 - 11:00 on Thursday\",\"value\":{\"type\":\"interval\",\"from\":{\"value\":\"2015-07-02T09:30:00.000+05:30\",\"grain\":\"minute\"},\"to\":{\"value\":\"2015-07-02T11:01:00.000+05:30\",\"grain\":\"minute\"},\"values\":[{\"type\":\"interval\",\"from\":{\"value\":\"2015-07-02T09:30:00.000+05:30\",\"grain\":\"minute\"},\"to\":{\"value\":\"2015-07-02T11:01:00.000+05:30\",\"grain\":\"minute\"}},{\"type\":\"interval\",\"from\":{\"value\":\"2015-07-02T21:30:00.000+05:30\",\"grain\":\"minute\"},\"to\":{\"value\":\"2015-07-02T23:01:00.000+05:30\",\"grain\":\"minute\"}},{\"type\":\"interval\",\"from\":{\"value\":\"2015-07-09T09:30:00.000+05:30\",\"grain\":\"minute\"},\"to\":{\"value\":\"2015-07-09T11:01:00.000+05:30\",\"grain\":\"minute\"}}]},\"start\":0,\"end\":29}]"
+
+    </div>
+  </div>
+
+  <div class="alert alert-info">
+
+    Replace time with number,ordinal,temperature,email,distance,volume,amount-of-money,duration,url,phone-number for parsing respected data.
+
+
+  </div>
+
+
+{% endblock %}
